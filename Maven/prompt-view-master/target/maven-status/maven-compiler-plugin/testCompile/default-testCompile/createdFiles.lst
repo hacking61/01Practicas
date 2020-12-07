@@ -1,0 +1,9 @@
+examples\string\StringSetInputScannerTest.class
+examples\precisiondouble\DoubleRangeInputScannerTest.class
+examples\string\StringInputScannerTest.class
+examples\precisiondouble\DoubleInputScannerTest.class
+examples\integer\IntegerRangeInputScannerTest.class
+examples\integer\IntegerInputScannerTest.class
+examples\string\PasswordInputScannerTest.class
+examples\menu\MenuInputScannerTest.class
+examples\precisiondouble\DoubleSetInputScannerTest.class

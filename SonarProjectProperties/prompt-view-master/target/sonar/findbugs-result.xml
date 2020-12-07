@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.1.2" sequence="0" timestamp="1607370447995" analysisTimestamp="1607371573181" release="">
+  <Project>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\InputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\Prompt.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\integer\IntegerInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\integer\IntegerRangeInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\integer\IntegerSetInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\menu\MenuInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\precisiondouble\DoubleInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\precisiondouble\DoubleRangeInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\precisiondouble\DoubleSetInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\string\PasswordInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\string\StringInputScanner.class</Jar>
+    <Jar>C:\Code\03\prompt-view-master\target\classes\org\academiadecodigo\bootcamp\scanners\string\StringSetInputScanner.class</Jar>
+    <AuxClasspathEntry>C:\Code\03\prompt-view-master\target\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Code\03\prompt-view-master\target\sonar\findbugs\annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Code\03\prompt-view-master\target\sonar\findbugs\jsr305.jar</AuxClasspathEntry>
+    <WrkDir>C:\Code\03\prompt-view-master\target\sonar</WrkDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="2b3e41ac3e6d3a7bb0852a061b4abd61" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in new org.academiadecodigo.bootcamp.Prompt(InputStream, PrintStream): new java.util.Scanner(InputStream)</LongMessage>
+    <Class classname="org.academiadecodigo.bootcamp.Prompt" primary="true">
+      <SourceLine classname="org.academiadecodigo.bootcamp.Prompt" start="12" end="27" sourcefile="Prompt.java" sourcepath="org/academiadecodigo/bootcamp/Prompt.java">
+        <Message>At Prompt.java:[lines 12-27]</Message>
+      </SourceLine>
+      <Message>In class org.academiadecodigo.bootcamp.Prompt</Message>
+    </Class>
+    <Method classname="org.academiadecodigo.bootcamp.Prompt" name="&lt;init&gt;" signature="(Ljava/io/InputStream;Ljava/io/PrintStream;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.academiadecodigo.bootcamp.Prompt" start="12" end="16" startBytecode="0" endBytecode="109" sourcefile="Prompt.java" sourcepath="org/academiadecodigo/bootcamp/Prompt.java"/>
+      <Message>In method new org.academiadecodigo.bootcamp.Prompt(InputStream, PrintStream)</Message>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+      <Message>Called method new java.util.Scanner(InputStream)</Message>
+    </Method>
+    <SourceLine classname="org.academiadecodigo.bootcamp.Prompt" primary="true" start="13" end="13" startBytecode="10" endBytecode="10" sourcefile="Prompt.java" sourcepath="org/academiadecodigo/bootcamp/Prompt.java">
+      <Message>At Prompt.java:[line 13]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5ac7529e0f038a3d7af1dc321b7ca46" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner(String[]) may expose internal representation by storing an externally mutable object into MenuInputScanner.options</LongMessage>
+    <Class classname="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" primary="true">
+      <SourceLine classname="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" start="11" end="35" sourcefile="MenuInputScanner.java" sourcepath="org/academiadecodigo/bootcamp/scanners/menu/MenuInputScanner.java">
+        <Message>At MenuInputScanner.java:[lines 11-35]</Message>
+      </SourceLine>
+      <Message>In class org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner</Message>
+    </Class>
+    <Method classname="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" start="11" end="16" startBytecode="0" endBytecode="89" sourcefile="MenuInputScanner.java" sourcepath="org/academiadecodigo/bootcamp/scanners/menu/MenuInputScanner.java"/>
+      <Message>In method new org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner(String[])</Message>
+    </Method>
+    <Field classname="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" name="options" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" sourcefile="MenuInputScanner.java" sourcepath="org/academiadecodigo/bootcamp/scanners/menu/MenuInputScanner.java">
+        <Message>In MenuInputScanner.java</Message>
+      </SourceLine>
+      <Message>Field org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner.options</Message>
+    </Field>
+    <LocalVariable name="options" register="1" pc="9" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named options</Message>
+    </LocalVariable>
+    <SourceLine classname="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" primary="true" start="13" end="13" startBytecode="9" endBytecode="9" sourcefile="MenuInputScanner.java" sourcepath="org/academiadecodigo/bootcamp/scanners/menu/MenuInputScanner.java">
+      <Message>At MenuInputScanner.java:[line 13]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 7 Dec 2020 19:47:27 +0000" total_classes="12" referenced_classes="31" total_bugs="2" total_size="220" num_packages="5" java_version="11.0.9" vm_version="11.0.9+7-LTS" cpu_seconds="10.97" clock_seconds="5.91" peak_mbytes="473.26" alloc_mbytes="4096.00" gc_seconds="0.12" priority_2="1" priority_1="1">
+    <FileStats path="org/academiadecodigo/bootcamp/InputScanner.java" bugCount="0" size="5"/>
+    <FileStats path="org/academiadecodigo/bootcamp/Prompt.java" bugCount="1" size="16" bugHash="2bbaea3feb1144f1880d0054a1d1bd3b"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/integer/IntegerInputScanner.java" bugCount="0" size="29"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/integer/IntegerRangeInputScanner.java" bugCount="0" size="17"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/integer/IntegerSetInputScanner.java" bugCount="0" size="15"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/menu/MenuInputScanner.java" bugCount="1" size="19" bugHash="657031c6ebc3eaf65548d9de78f81322"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/precisiondouble/DoubleInputScanner.java" bugCount="0" size="29"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/precisiondouble/DoubleRangeInputScanner.java" bugCount="0" size="17"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/precisiondouble/DoubleSetInputScanner.java" bugCount="0" size="15"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/string/PasswordInputScanner.java" bugCount="0" size="15"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/string/StringInputScanner.java" bugCount="0" size="29"/>
+    <FileStats path="org/academiadecodigo/bootcamp/scanners/string/StringSetInputScanner.java" bugCount="0" size="14"/>
+    <PackageStats package="org.academiadecodigo.bootcamp" total_bugs="1" total_types="2" total_size="21" priority_1="1">
+      <ClassStats class="org.academiadecodigo.bootcamp.InputScanner" sourceFile="InputScanner.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.academiadecodigo.bootcamp.Prompt" sourceFile="Prompt.java" interface="false" size="16" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.academiadecodigo.bootcamp.scanners.integer" total_bugs="0" total_types="3" total_size="61">
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.integer.IntegerInputScanner" sourceFile="IntegerInputScanner.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.integer.IntegerRangeInputScanner" sourceFile="IntegerRangeInputScanner.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.integer.IntegerSetInputScanner" sourceFile="IntegerSetInputScanner.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.academiadecodigo.bootcamp.scanners.menu" total_bugs="1" total_types="1" total_size="19" priority_2="1">
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner" sourceFile="MenuInputScanner.java" interface="false" size="19" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.academiadecodigo.bootcamp.scanners.precisiondouble" total_bugs="0" total_types="3" total_size="61">
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.precisiondouble.DoubleInputScanner" sourceFile="DoubleInputScanner.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.precisiondouble.DoubleRangeInputScanner" sourceFile="DoubleRangeInputScanner.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.precisiondouble.DoubleSetInputScanner" sourceFile="DoubleSetInputScanner.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.academiadecodigo.bootcamp.scanners.string" total_bugs="0" total_types="3" total_size="58">
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.string.PasswordInputScanner" sourceFile="PasswordInputScanner.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.string.StringInputScanner" sourceFile="StringInputScanner.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.academiadecodigo.bootcamp.scanners.string.StringSetInputScanner" sourceFile="StringSetInputScanner.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="692" invocations="425" avgMicrosecondsPerInvocation="1628" maxMicrosecondsPerInvocation="66867" standardDeviationMicrosecondsPerInvocation="4728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="508" invocations="2" avgMicrosecondsPerInvocation="254149" maxMicrosecondsPerInvocation="328097" standardDeviationMicrosecondsPerInvocation="73948"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="432" invocations="429" avgMicrosecondsPerInvocation="1007" maxMicrosecondsPerInvocation="336539" standardDeviationMicrosecondsPerInvocation="16224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="290" invocations="12" avgMicrosecondsPerInvocation="24190" maxMicrosecondsPerInvocation="232178" standardDeviationMicrosecondsPerInvocation="64430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="110" invocations="121" avgMicrosecondsPerInvocation="909" maxMicrosecondsPerInvocation="36356" standardDeviationMicrosecondsPerInvocation="3649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="99" invocations="31" avgMicrosecondsPerInvocation="3220" maxMicrosecondsPerInvocation="38142" standardDeviationMicrosecondsPerInvocation="7996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="92" invocations="73" avgMicrosecondsPerInvocation="1269" maxMicrosecondsPerInvocation="28276" standardDeviationMicrosecondsPerInvocation="4593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="69" invocations="31" avgMicrosecondsPerInvocation="2253" maxMicrosecondsPerInvocation="27480" standardDeviationMicrosecondsPerInvocation="5165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="65" invocations="392" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="7800" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="63" invocations="31" avgMicrosecondsPerInvocation="2034" maxMicrosecondsPerInvocation="23744" standardDeviationMicrosecondsPerInvocation="5556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="62" invocations="48" avgMicrosecondsPerInvocation="1300" maxMicrosecondsPerInvocation="9387" standardDeviationMicrosecondsPerInvocation="1998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="60" invocations="57" avgMicrosecondsPerInvocation="1054" maxMicrosecondsPerInvocation="22547" standardDeviationMicrosecondsPerInvocation="3481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="59" invocations="61" avgMicrosecondsPerInvocation="970" maxMicrosecondsPerInvocation="45507" standardDeviationMicrosecondsPerInvocation="5789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="56" invocations="57" avgMicrosecondsPerInvocation="982" maxMicrosecondsPerInvocation="8540" standardDeviationMicrosecondsPerInvocation="1627"/>
+      <ClassProfile name="com.h3xstream.findsecbugs.taintanalysis.TaintDataflowEngine" totalMilliseconds="55" invocations="57" avgMicrosecondsPerInvocation="980" maxMicrosecondsPerInvocation="11194" standardDeviationMicrosecondsPerInvocation="2064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="54" invocations="31" avgMicrosecondsPerInvocation="1764" maxMicrosecondsPerInvocation="29279" standardDeviationMicrosecondsPerInvocation="5301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StaticCalendarDetector" totalMilliseconds="54" invocations="12" avgMicrosecondsPerInvocation="4504" maxMicrosecondsPerInvocation="53307" standardDeviationMicrosecondsPerInvocation="14714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="48" invocations="57" avgMicrosecondsPerInvocation="850" maxMicrosecondsPerInvocation="12319" standardDeviationMicrosecondsPerInvocation="1723"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="44" invocations="31" avgMicrosecondsPerInvocation="1435" maxMicrosecondsPerInvocation="27858" standardDeviationMicrosecondsPerInvocation="4975"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
